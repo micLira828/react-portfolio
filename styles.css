@@ -3,6 +3,17 @@ header,main, #paragraph{
     padding: 15%;
     justify-content:space-between;
 }
+#header_logo{
+    flex: 1.5;
+}
+nav li{
+    list-style:none;
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+}
 
 .column, body{
     display:flex;
