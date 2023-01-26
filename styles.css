@@ -1,10 +1,29 @@
+body{
+    font-family: sans-serif;
+    color: #1f2937;
+}
 
 header,main, #paragraph{
     padding: 15%;
     justify-content:space-between;
 }
+
+header{
+    background-color:#1f2937;
+    
+}
+
+
+header, a{
+    color: #efe7eb;
+}
 #header_logo{
     flex: 1.5;
+}
+
+h1{
+    font-size: 38px;
+    font-weight: bold;
 }
 nav li{
     list-style:none;
@@ -13,6 +32,7 @@ nav li{
 
 a{
     text-decoration: none;
+    font-size: 18px;
 }
 
 .column, body{
@@ -24,7 +44,7 @@ a{
 }
 
 button{
-    background-color:lightblue;
+    background-color:#3882f6;
      color:white;
      font-weight: bold;
      border:none;
