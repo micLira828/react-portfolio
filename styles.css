@@ -12,8 +12,17 @@ header,main, #paragraph{
    flex-wrap: wrap;   
 }
 
+button{
+    background-color:lightblue;
+     color:white;
+     font-weight: bold;
+     border:none;
+     border-radius: 20px;
+     padding: 12px;
+}
 
-#columns{
+
+.columns{
     display:flex;
 }
 
