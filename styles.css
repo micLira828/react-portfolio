@@ -1,4 +1,9 @@
 
+header,main, #paragraph{
+    padding: 15%;
+    justify-content:space-between;
+}
+
 .column, body{
     display:flex;
     flex-direction:column;
@@ -7,10 +12,6 @@
    flex-wrap: wrap;   
 }
 
-header,main{
-    padding: 15%;
-    justify-content:space-between;
-}
 
 #columns{
     display:flex;
