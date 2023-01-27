@@ -8,13 +8,13 @@ header,main, #paragraph{
     justify-content:space-between;
 }
 
-header{
+header, footer{
     background-color:#1f2937;
     
 }
 
 
-header, a{
+header, a, footer{
     color: #efe7eb;
 }
 #header_logo{
@@ -35,13 +35,14 @@ a{
     font-size: 18px;
 }
 
-.column, body{
+.column, body, footer{
     display:flex;
     flex-direction:column;
     align-items: center;
     justify-content: center;
-   flex-wrap: wrap;   
+    flex-wrap: wrap;   
 }
+
 
 button{
     background-color:#3882f6;
@@ -67,3 +68,8 @@ button{
     border-radius: 25px;
 }
 
+
+footer{
+    width: 100vw;
+    padding: 1.5%;
+}
