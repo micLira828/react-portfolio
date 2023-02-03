@@ -1,0 +1,191 @@
+/*Make the margin 0*/
+*{
+    margin: 0;
+    padding: 0;
+
+    /*for no border*/
+    border: 0;
+
+    /*For no bullets,
+    and no underline for links*/
+    list-style: none;
+    text-decoration: none;
+
+    /*What is this?*/
+    box-sizing: border-box;
+
+}
+
+:root{
+    --primary-hue: 270;
+    --black-lightness: 15%;
+    --dark-lightness: 44%;
+    --light-lightness: 94%;
+    --white-lightness: 100%;
+    --color-primary: hsl(var(--primary-hue), 89%, 41%);
+    --color-white: hsl(0, 5%, var(--white-lightness));
+    --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
+    --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
+    --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
+
+    /* GENERAL CONTAINER VARIABLES */
+    --container-width-lg: 76%;
+    --container-width-md: 90%;
+
+    /* BORDER RADIUS VARIABLES */
+    --border-radius-1: 1.2rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 0.5rem;
+
+    /* GENERAL TRANSITION VARIABLE */
+    --transition: all 500ms ease;
+}
+
+html{
+    /*What is this?*/
+    scroll-behavior: smooth;
+}
+
+body{
+font-family: 'Montserrat', sans-serif;
+
+/*Line height*/
+line-height:1.6rem;
+
+/*Letters*/
+font-size:0.9rem;
+}
+
+.container{
+    /*set width to large container variable*/
+    width:var(--container-width-lg);
+    /*What is this?*/
+    margin-inline:auto;
+
+    /*So they won't fo past a certain width*/
+    max-width: 1920px;
+}
+
+section{
+    /*set the spacing of all the sections*/
+    padding: 10rem 0;
+    /*Make the background a light color*/
+    background: var(--color-light);
+
+    transition: var(--transition);
+}
+
+/*Even numbered section have 
+a white background color*/
+section:nth-child(even){
+    background: var(--color-white);
+}
+
+section > h2, section > p{
+    /*Align text to the center*/
+    text-align: center;
+}
+
+section > p{
+    /*Margins of sections of paragraphs*/
+    margin: 0.5rem auto 4rem;
+
+    /*Make the sidth 40%*/
+    width: 40%;
+}
+
+a{
+    /*colors of links*/
+    /*color: var(--color-white);*/
+    transition: var(--transition);
+}
+
+h1, h2, h3, h4, h4, h5, h6{
+    line-height: 1.1;
+    color: --var(color-black);
+}
+
+/*Heading sizes*/
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.6rem;
+}
+
+h4{
+    font-size: 1.1rem;
+}
+
+h5{
+    font-size: 0.95rem;
+}
+
+h6{
+    font-size: 0.8rem;
+}
+
+img{
+    /*Make image the width of the whole container*/
+    display: block;
+    width: 100%;
+    /*For it to fit in the whole container/page?*/
+    object-fit: cover;
+}
+
+.btn{
+    /*To make the horizontal*/
+    display: inline-block;
+    /*The box will use available space*/
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    /*Have gaps*/
+    gap: 1rem;
+    color: var(--color-black);
+    padding: 0.6rem 2.5rem;
+
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-2);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: transparent;
+    border-color: var(--color-light);
+    transform: translateY(-0.5rem);
+}
+
+.btn.white{
+    background: var(--color-white);
+}
+
+.btn.white:hover{
+    /*transparent background*/
+    background:transparent;
+
+    /**/
+    border-color: var(--color-white);
+
+}
+
+
+.btn.primary:hover{
+    /*transparent background*/
+    background:transparent;
+
+    /**/
+    border-color: var(--color-primary);
+
+    color: var(--color-primary);
+
+}
+
+.btn.sm{
+    padding: 0.5rem 1.2rem;
+}
