@@ -5,6 +5,7 @@ import './navbar.css';
 
 function Navbar() {
   return (
+    <nav>
     <div className="container nav__container">
      {/*Link */}
       <a href = "index.html" className = 'nav__logo'>
@@ -20,6 +21,7 @@ function Navbar() {
        {/*Button*/}
       <button id = 'theme__icon'><IoIosColorPalette/></button>
     </div>
+    </nav>
   )
 }
 
