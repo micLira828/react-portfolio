@@ -194,6 +194,10 @@ img{
     padding: 0.5rem 1.2rem;
 }
 
+
+.nav__menu a{
+    color: white;
+}
 /* MEDIA QUERIES (tablets) */
 @media screen and (max-width: 1024px) {
     body {
