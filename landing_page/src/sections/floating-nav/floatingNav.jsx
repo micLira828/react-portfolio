@@ -1,9 +1,9 @@
-import './floating-nav.css';
+import React from 'react'
 
-function floatingNav() {
+function FloatingNav() {
   return (
-    <div id="floatingNav"></div>
+    <div>FloatingNav</div>
   )
 }
 
-export default floatingNav
+export default FloatingNav

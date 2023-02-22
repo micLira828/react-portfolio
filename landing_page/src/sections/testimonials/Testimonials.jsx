@@ -1,8 +1,8 @@
-import  './testimonials.css'
+import React from 'react'
 
 function Testimonials() {
   return (
-    <section id="testimonials"><h2>Testimonials</h2></section>
+    <section id = "testimonials"><h2>Testimonials</h2></section>
   )
 }
 
