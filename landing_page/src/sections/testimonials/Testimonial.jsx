@@ -1,8 +1,21 @@
-import React from 'react'
+import Card from '../../components/Card';
 
-function Testimonial() {
+const Testimonial = ({testimonial})  => {
   return (
-    <div>Testimonial</div>
+    <Card className="light">
+      <p>
+        {testimonial.quote}
+      </p>
+      <div className="testimonial__client">
+        <div className="testimonial__client avatar">
+          <img src = {testimonial.avatar} alt = "Testimonial avatar"/>
+        </div>
+        <div className="testimonial__client-details">
+          <h6>{testimonial.name}</h6>
+          <small>{testimonial.profession}</small>
+        </div>
+      </div>
+    </Card>
   )
 }
 
