@@ -2,8 +2,8 @@ import AboutImage from '../../assets/about.jpg'
 import CV from '../../assets/cv.pdf'
 import {HiDownload} from 'react-icons/hi'
 import data from './data'
-import Card from '../../components/Card'
-import './about.css'
+import Card from '../../components/Card';
+import './about.css';
 
 const About = () => {
   return (
@@ -28,10 +28,10 @@ const About = () => {
                     }
                 </div>
                 <p>
-                Building projects my clients love have always been my passion. Being in the web development industry for over 3 years and serving more than 70 happy clients worldwide, I'm always motivated to do more!
+                Building projects my clients love have always been my passion. Being in the media and web development industry for over 8 years, I'm always motivated to do more!
                 </p>
                 <p>
-                Hi, my name is Hajia Bintu from Accra, Ghana. I'm a full-stack web developer with a Bachelors degree in Computer Science. My top priority is to get your business online the right way, giving you industry-standard design and all the functionality you need to operate smoothly online. Get in touch today with the details of your project let's get started! Check out my resume below!
+                Hi, my name is Michelle Liran Gepshtein-Bartholomew from San Diego, California. I'm a full-stack web and multimedia developer and designer with a Bachelors degree in Media and Associates degree in Web Development. My top priority is to get your business online the right way, giving you beautiful unique design which would operate smoothly online. Get in touch today with the details of your project let's get started! Check out my resume below!
                 </p>
                 <a href={CV} download className='btn primary'>Download CV <HiDownload/></a>
             </div>
