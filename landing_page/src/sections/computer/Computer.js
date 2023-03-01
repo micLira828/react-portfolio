@@ -6,8 +6,8 @@ const Computer = (props) => (
   <svg id = "computerAnimation"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width={600}
-    height={600}
+    width={500}
+    height={500}
     fill="currentColor"
     className="bi bi-laptop"
     viewBox="0 0 16 16"
