@@ -18,7 +18,8 @@ export const ThemeProvider = ({children}) => {
         localStorage.setItem('themeSettings', JSON.stringify(themeState))
     }, [themeState.primary, themeState.background])
 
-
+    
+    console.log(themeState);
     return <ThemeContext.Provider value={{themeState, themeHandler}}>{children}</ThemeContext.Provider>
 }
 

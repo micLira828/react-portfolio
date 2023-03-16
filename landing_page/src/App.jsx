@@ -7,16 +7,18 @@ import Testimonials from './sections/testimonials/Testimonials';
 import FAQs from './sections/FAQS/FAQs';
 import Contact from './sections/contact/Contact';
 import Footer from './sections/footer/Footer';
-import { useEffect } from 'react';
+import Theme from './theme/Theme';
+import { useThemeContext } from './context/theme-context';
+/*import { useEffect } from 'react';
 import Computer from './sections/computer/Computer';
-import $ from 'jquery';
-//import FloatingNav from './sections/floating-nav/FloatingNav';
+//import $ from 'jquery';
+//import FloatingNav from './sections/floating-nav/FloatingNav';*/
 
 
 
 const App = () => {
 
-  useEffect(() => {
+ /* useEffect(() => {
    
     $('#rightCircle').hide();
      $('#leftCircle').hide();
@@ -47,13 +49,12 @@ const App = () => {
      });
    
    });
-});
-
+});*/
+const {themeState} = useThemeContext();
   return (
-
     <>
-    <Computer/>
-    <main>
+    {/*<Computer/>*/}
+    <main className = {`${themeState.primary} ${themeState.background}`}>
         <Navbar/>
         <Header/>
         <About/>
@@ -63,7 +64,7 @@ const App = () => {
         <FAQs/>
         <Contact/>
         <Footer/>
-      
+      <Theme/>
     </main>
     </>
   )
