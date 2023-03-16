@@ -9,10 +9,12 @@ import Contact from './sections/contact/Contact';
 import Footer from './sections/footer/Footer';
 import Theme from './theme/Theme';
 import { useThemeContext } from './context/theme-context';
+import FloatingNav from './sections/floating-nav/FloatingNav';
+import {useRef, useState, useEffect} from 'react';
 /*import { useEffect } from 'react';
 import Computer from './sections/computer/Computer';
 //import $ from 'jquery';
-//import FloatingNav from './sections/floating-nav/FloatingNav';*/
+*/
 
 
 
@@ -50,11 +52,38 @@ const App = () => {
    
    });
 });*/
+const mainRef = useRef();
 const {themeState} = useThemeContext();
+const [showFloatingNav, setShowFloatingNav] =  useState(true);
+const [siteYposition, setSiteYPosition] = useState(0);
+
+const showFloatingNavHandler = () =>{
+  setShowFloatingNav(true);
+}
+
+const hideFloatingNavHandler = () =>{
+  setShowFloatingNav(false);
+}
+
+const floatingNavToggleHandler = () =>{
+  if (siteYposition < mainRef?.current?.getBoundingClientRect().y - 20 ||siteYposition > mainRef?.current?.getBoundingClientRect().y + 20  ){
+    showFloatingNavHandler();
+  }
+  else{
+    hideFloatingNavHandler();
+  }
+
+  setSiteYPosition(mainRef?.current?.getBoundingClientRect().y);
+}
+
+useEffect(() => {
+  const checkYPosition = setInterval(floatingNavToggleHandler, 2000);
+  return () => clearInterval(checkYPosition);
+}, [siteYposition])
   return (
     <>
     {/*<Computer/>*/}
-    <main className = {`${themeState.primary} ${themeState.background}`}>
+    <main className = {`${themeState.primary} ${themeState.background}` } ref={mainRef}>
         <Navbar/>
         <Header/>
         <About/>
@@ -65,6 +94,7 @@ const {themeState} = useThemeContext();
         <Contact/>
         <Footer/>
       <Theme/>
+      {showFloatingNav && <FloatingNav/>}
     </main>
     </>
   )
