@@ -1,14 +1,18 @@
 import { useEffect } from 'react'
 import HeaderImage from '../../assets/header.jpg'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import data from './data'
 import './header.css'
 
 const Header = () => {
-  
+  useEffect(() => {
+    AOS.init({duration: 2000})
+  }, [])
   return (
     <header id="header">
       <div className="container header__container">
-        <div className="header__profile">
+        <div className="header__profile" data-aos = "fade-in">
           <img src={HeaderImage} alt="Header Portait" />
         </div>
         <h3  data-aos="fade-up">Michelle Liran Gepshtein-Bartholomew</h3>
